@@ -3,76 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Texto com Música</title>
+    <title>Minha Mensagem</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            position: relative;
-        }
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            opacity: 0.2;
+            font-family: Arial, sans-serif;
+            color: white;
             overflow: hidden;
         }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            animation: slide 30s infinite linear;
+        }
         .background img {
-            position: absolute;
             width: 100%;
             height: auto;
-            animation: slide 30s infinite alternate;
-        }
-        .background img:nth-child(1) {
-            animation-delay: 0s;
-        }
-        .background img:nth-child(2) {
-            animation-delay: 5s;
-        }
-        .background img:nth-child(3) {
-            animation-delay: 10s;
-        }
-        .background img:nth-child(4) {
-            animation-delay: 15s;
         }
         @keyframes slide {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10%); }
+            0% { background-image: url('https://i.imgur.com/WAcmea0.jpeg'); }
+            25% { background-image: url('https://i.imgur.com/emxfwyr.jpeg'); }
+            50% { background-image: url('https://i.imgur.com/nnL5uWK.jpeg'); }
+            75% { background-image: url('https://i.imgur.com/0NiJnKr.jpeg'); }
+            100% { background-image: url('https://i.imgur.com/WAcmea0.jpeg'); }
         }
         .content {
-            padding: 20px;
             position: relative;
             z-index: 1;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="background">
-        <img src="https://i.imgur.com/WAcmea0.jpeg" alt="Imagem 1">
-        <img src="https://i.imgur.com/emxfwyr.jpeg" alt="Imagem 2">
-        <img src="https://i.imgur.com/nnL5uWK.jpeg" alt="Imagem 3">
-        <img src="https://i.imgur.com/0NiJnKr.jpeg" alt="Imagem 4">
-    </div>
+<div class="background"></div>
 
-    <audio autoplay loop>
-        <source src="URL_DA_MUSICA.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
-    <div class="content">
-        <h1>Meu Texto</h1>
-        <p>Oi,</p>
-        <p>Eu sinto muito por estar escrevendo isso. Sei que a vida tem desses momentos e que eu preciso seguir em frente, mas não consigo evitar lembrar o quanto era bom te amar de perto...</p>
-        <p>Desde aquele dia 13, quando te vi pela primeira vez, minha vida mudou completamente...</p>
-        <p>Nossa primeira beijo naquela esquina, aquela primeira noite na minha casa… Você lembra?... </p>
-        <!-- Adicione o restante do seu texto aqui -->
-    </div>
+<div class="content">
+    <h1>Minha Mensagem</h1>
+    <p>
+        Eu queria muito que tivesse uma forma de te mostrar como minha mente funciona em relação a você. Você é minha princesa, eu daria o mundo pra você. Só existe você na minha cabeça. Você vive dizendo que eu bebo e não sei o que, e dou valor pra isso. E sim, eu fosto de sair de casa porque você sabe como é problemática minha casa. Eu me identifico muito mais com qualquer estranho na rua do que com as pessoas que eu convivo. Eu bebo porque me faz acalmar e pensar, sabe? Não de uma forma exagerada, mas o suficiente pra eu não surtar. Eu tive que aprender muita coisa ruim desde cedo, amor, e você estar do meu lado sempre tirou um peso enorme disso. Eu não consigo mais escrever porque tô muito mal, mas quero que você saiba que você é a princesa mais linda do mundo, a mulher mais incrível que eu já conheci, a dona do meu coração, a mãe dos meus filhos. E pode ter certeza que se você ainda me der esse 0,01%, eu vou virar o jogo e nossa história vai ser linda. Não precisa acontecer agora, mas eu vou te provar.
+    </p>
+    <!-- Adicione o restante do seu texto aqui -->
+</div>
 
 </body>
 </html>
